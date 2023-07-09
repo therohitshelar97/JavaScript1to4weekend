@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>User Input</title>
+</head>
+<body>
+    <form name="form1" action="">
+        amount1:<input type="number" name="amount1" />
+        <br><br>
+        amount2:<input type="number" name="amount2" />
+    </form>
+    <script>
+         function user(){
+            a = parseInt(document.form1.amount1.value);
+            b = parseInt(document.form1.amount2.value);
+            document.write(a+b)
+         }
+    </script>
+    <button onclick="user()">run</button>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Result</title>
+    <style>
+        .td{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form name="form1" action="">
+        SeatNumber:<input type="number" name="seat1" />
+        <br><br>
+        Mother Name:<input type="text" name="name1" />
+    </form>
+    <div align="center">
+    <table width="900px" class="td">
+        <h4>Seat Number : <i id="seat"></i></h4>
+        <h4>Mother Name : <i id="mname"></i></h4>
+        <tr>
+            <th>Mathematic</th>
+            <th>Physics</th>
+            <th>Chemistry</th>
+            <th>Biology</th>
+            <th>Percentage</th>
+        </tr>
+        <tr>
+            <td><p id="math"></p></td>
+            <td><p id="phy"></p></td>
+            <td><p id="chem"></p></td>
+            <td><p id="bio"></p></td>
+            <td><p id="avg"></p>%</td>
+        </tr>
+    </table>
+</div>
+    <script>
+        function Result(){
+
+        seat = parseInt(document.form1.seat1.value);
+        Mname = document.form1.name1.value;
+        if(seat == 123 && Mname == "abc"){
+            document.getElementById("seat").innerHTML = seat;
+            document.getElementById("mname").innerHTML = Mname;
+           math = document.getElementById("math").innerHTML = 78;
+           phy = document.getElementById("phy").innerHTML = 67;
+           chem = document.getElementById("chem").innerHTML = 90;
+           bio = document.getElementById("bio").innerHTML = 70;
+
+            avg = ((math+phy+chem+bio)/(4))
+            document.getElementById("avg").innerHTML = avg;
+        }
+        else if (seat == 124 && Mname == "abd"){
+            document.getElementById("seat").innerHTML = seat;
+            document.getElementById("mname").innerHTML = Mname;
+            document.getElementById("math").innerHTML = 87;
+            document.getElementById("phy").innerHTML = 60;
+            document.getElementById("chem").innerHTML = 90;
+            document.getElementById("bio").innerHTML = 70;
+        }
+        else{
+        document.write("Invalid Name Or seat number_")
+    }
+    }
+    
+    </script>
+    <button type="submit" onclick="Result()">Show Result</button>
+</body>
+</html>
